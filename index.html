@@ -2,192 +2,126 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
+<title>Shoham Zarfati</title>
 </head>
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
-		  
-<section id="about" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+
+
+<header>
+  <img src="rec/logo.svg" alt="logo" class="logo" id="menu" width="7%" height="7%"> 
+
+
+  <nav>
+    <ul class="nav_links">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#photos">My Photos</a></li>
+      <li><a href="#playlist">My Playlist</a></li>
+      <li><a href="#like">Like</a></li>
+      <li><a href="#qrcoder">QR code</a></li>
+      <li><a href="#spa">Q&A</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <a class="cta" href="#"><button>Contact</button></a>
+
+</header>
+
+
+<script type="text/javascript">
+  $(function(){
+    $("#nav a").click(function(e){
+      e.preventDefault();
+      $('html,body').scrollTo(this.hash,this.hash); 
+    });
+  });
+  </script>
+
+<section id="about" class="section">    
+  <h1 class="sec_title">About Me</h1>
+  <div class="sec_content">
+    <p>
+      Hello There my name is shoham and this is my website.<br>
+      I am an information system engeniring student at Ben Gurion University
+      and this is my first assignment in the course web development enviorments.
+      This seems like a pretty fun course right now (נשבע שאני לא מתחנף) as we are learning how 
+      the world wide web works and how to leave own footprint in it.
+      I hope we get to more advanced subjects and by the end of it I will be able to 
+      build a full stack web site from scratch using interesting web technologies.
+      Other than that im very interested in low level implemetation of ideas as i enjoy the 
+      process of optimizing code and creating solutions from a minimal starting point.
+      Other than learning i enjoy sports and play almost every game with a ball (football basketball...)
+      thogh latly im playing less than i would like to.
+      I am also a reletavly active gamer (i actually just finished a game of CSGO) thogh because gaming usually ends
+      up sucking me in i dont play much during the semster. <br>
+      Well thats enogh about me, hope you enjoy the the website :D.
+
+    </p>
+  </div>
+
 </section>
 
 <section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
+  <h1 class="sec_title">My Photos</h1>
+
+  <div class="sec_content">
+    <p> Ok picture time! Thease are some of my favorite pictures of me and my friends ( and one of me writing the very text you are reading ;) </p>
+  </div>
+
+  <div class="gallery">
+    <div> <img src="rec/pictures/adv_1.jpg"> </div>
+    <div> <img src="rec/pictures/adv_2.jpg"> </div>
+    <div> <img src="rec/pictures/web_making.jpeg"> </div>
+  </div>
+  
+
 </section>
 
 <section id="playlist" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
+  <h1 class="sec_title">My Playlist</h1>
+  
+  <div class="sec_content">
+
+    <p> This is my favorite playlist! i listen to this whenever i work, play, workout, any time really, I LOVE WEB DEV </p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL41lfR-6DnOr-8R-6VFsUfT-6iImOyJIa"
+     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  </div>
+
 </section>
 
 <section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
+  <h1 class="sec_title">Give Me a Like</h1>
+
+  <div class="sec_content">
+    <p> SOCIAL MEDIA, now this is very important, please give me a like, it would make my day my month and maybe even my year,
+       im so desperate and lonly this is all i have !! </p>
+
+       <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/"
+        data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true">
+      </div>
+  </div>
+
 </section>
 
 <section id="qrcoder" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
-<br/>
+  <h1 class="sec_title">Scan My Code</h1>
 </section>
 
 <section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
+  <h1 class="sec_title">Answers</h1>
 </section>
 
 <section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
+  <h1 class="sec_title">Contact Me</h1>
 </section>
 
 
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
+
+
+
 </body>
 </html>
