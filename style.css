@@ -122,13 +122,8 @@ button:hover {
 }
 
 .fb-like {
-	background-color: azure;
-	border-radius: 10px;
-
-	padding-left: 170px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-
+	padding-left: 20%;
+	margin-left: 0px;
 }
 
 .txtinput {

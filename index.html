@@ -4,6 +4,11 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <title>Shoham Zarfati</title>
 <meta charset="utf-8">
+<meta property="og:url"           content="https://sise-web-development-environments.github.io/assignment1-Zshoham/index.html" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="Shoham Zarfati" />
+<meta property="og:description"   content="Assignment 1 in web dev enviorments" />
+
 </head>
 <body>
   <div id="fb-root"></div>
@@ -72,8 +77,8 @@
   </div>
 
   <div class="gallery">
-    <div> <img src="rec/pictures/adv_1.jpg"> </div>
-    <div> <img src="rec/pictures/adv_2.jpg"> </div>
+    <div> <img src="rec/pictures/adv_friends.jpg"> </div>
+    <div> <img src="rec/pictures/adv_scenery.jpg"> </div>
     <div> <img src="rec/pictures/web_making.jpeg"> </div>
   </div>
   
@@ -101,8 +106,8 @@
     <p> SOCIAL MEDIA, now this is very important, please give me a like, it would make my day my month and maybe even my year,
        im so desperate and lonly this is all i have !! </p>
 
-       <div class="fb-like" data-href="https://sise-web-development-environments.github.io/assignment1-Zshoham/"
-      data-layout="standard" data-action="like" data-size="small" data-share="true">
+       <div class="fb-like" data-href="https://sise-web-development-environments.github.io/assignment1-Zshoham/index.html"
+       data-colorscheme="dark" data-layout="standard" data-action="like" data-size="small" data-share="true">
       </div>
   </div>
 
@@ -170,15 +175,19 @@
 
     <p> Hey! im very lonly please send me an email, i promise its not an email collector :D </p>
 
-    <form action="mailto:SupremeGamer@gmail.com" onsubmit="addEmoji()" method="post" enctype="text/plain" align="center">
+    <form id="From" method="post" onsubmit="addEmoji()" enctype="text/plain" align="center">
 
       <p>
-        <label for="Name">Your Email:</label>
-        <input class="txtinput" id="Name" name="Name" type="text" size="25" required>
+        <label for="Name">Sender:</label>
+        <input class="txtinput" id="Mail" name="Name" type="text" size="25" required>
       </p>
     
+      <p>
+        <label for="Name">Subject:</label>
+        <input class="txtinput" id="Subject" name="Name" type="text" size="25" required>
+      </p>
 
-      <label for="Text">Your Message:</label>
+      <label for="Text">Message:</label>
       <p>
         <textarea class="txtbox" id="Text" name="Text" rows="10" cols="50" required></textarea>
       </p>
@@ -201,8 +210,13 @@
   
   <script>
     function addEmoji() {
-      const emoji = document.getElementById("emoji_selector").value
-      document.getElementById("Text").value += emoji
+      const emoji = document.getElementById("emoji_selector").value;
+      const message = document.getElementById("Text").value + " " + emoji;
+      const email = document.getElementById("Mail").value
+      const subject = document.getElementById("Subject").value
+
+      location.href = "mailto:SupremeGamer@gmail.com?subject=" + subject +"&body=From - " + email + "%0D%0A" + message;
+      event.preventDefault()
     }
   </script>
 
