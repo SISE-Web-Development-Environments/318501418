@@ -8,7 +8,7 @@ github username: Zshoham
 
 BGU username: shohamza
 
-deployment link: https://sise-web-development-environments.github.io/assignment1-Zshoham/
+deployment link: https://sise-web-development-environments.github.io/318501418/
 
 This is my submission for the first assignment in the course Web Dev please do not take the content of the site too seriously.
 
