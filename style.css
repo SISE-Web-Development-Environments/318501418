@@ -7,6 +7,13 @@ body {
 	background-color: #222222;
 }
 
+* {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #eeeeee;
+}
+
 li, a, button {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
@@ -70,11 +77,20 @@ button:hover {
 }
 
 .sec_content {
+	text-align: center;
+	margin-bottom: 5%;
+
+	margin-left: 20%;
+	margin-right: 20%;
+	
+}
+
+.qna {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	font-size: 16px;
 	color: #eeeeee;
-	text-align: center;
+	text-align: left;
 	margin-bottom: 5%;
 
 	margin-left: 20%;
@@ -108,5 +124,61 @@ button:hover {
 .fb-like {
 	background-color: azure;
 	border-radius: 10px;
+
+	padding-left: 170px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+.txtinput {
+	border-radius: 10px;
+	background-color: #333333;
+	border: none;
+
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.txtbox {
+	border-radius: 10px;
+	background-color: #333333;
+	border: none;
+	
 	padding: 10px;
+}
+
+.bttn_submit {
+	padding: 9px 25px;
+	background-color: rgba(0, 136, 169, 1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.bttn_submit:hover {
+	background-color: rgba(0, 136, 169, 0.6);
+}
+
+.bttn_reset {
+	padding: 9px 25px;
+	background-color: rgb(169, 0, 0);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.bttn_reset:hover {
+	background-color: rgba(169, 0, 0, 0.6);
+}
+
+.emoji {
+	background-color: #333333;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
 }

@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
 <title>Shoham Zarfati</title>
+<meta charset="utf-8">
 </head>
 <body>
   <div id="fb-root"></div>
@@ -10,7 +11,7 @@
 
 
 <header>
-  <img src="rec/logo.svg" alt="logo" class="logo" id="menu" width="7%" height="7%"> 
+  <img src="rec/logo.svg" alt="logo" class="logo" width="7%" height="7%"> 
 
 
   <nav>
@@ -25,7 +26,7 @@
     </ul>
   </nav>
 
-  <a class="cta" href="#"><button>Contact</button></a>
+  <a class="cta" href="#secret"><button>Secret Sauce</button></a>
 
 </header>
 
@@ -48,13 +49,13 @@
       and this is my first assignment in the course web development enviorments.
       This seems like a pretty fun course right now (נשבע שאני לא מתחנף) as we are learning how 
       the world wide web works and how to leave own footprint in it.
-      I hope we get to more advanced subjects and by the end of it I will be able to 
+      I hope we get to more advanced subjects and by the end of it, I will be able to 
       build a full stack web site from scratch using interesting web technologies.
       Other than that im very interested in low level implemetation of ideas as i enjoy the 
       process of optimizing code and creating solutions from a minimal starting point.
       Other than learning i enjoy sports and play almost every game with a ball (football basketball...)
-      thogh latly im playing less than i would like to.
-      I am also a reletavly active gamer (i actually just finished a game of CSGO) thogh because gaming usually ends
+      though latly I'm playing less than i would like to.
+      I am also a reletavly active gamer (i actually just finished a game of CSGO) but because gaming usually ends
       up sucking me in i dont play much during the semster. <br>
       Well thats enogh about me, hope you enjoy the the website :D.
 
@@ -67,7 +68,7 @@
   <h1 class="sec_title">My Photos</h1>
 
   <div class="sec_content">
-    <p> Ok picture time! Thease are some of my favorite pictures of me and my friends ( and one of me writing the very text you are reading ;) </p>
+    <p> Ok picture time! These are some of my favorite pictures of me and my friends ( and one of me writing the very text you are reading ;) ) </p>
   </div>
 
   <div class="gallery">
@@ -100,7 +101,7 @@
     <p> SOCIAL MEDIA, now this is very important, please give me a like, it would make my day my month and maybe even my year,
        im so desperate and lonly this is all i have !! </p>
 
-       <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/"
+       <div class="fb-like" data-href="https://sise-web-development-environments.github.io/assignment1-Zshoham/"
         data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true">
       </div>
   </div>
@@ -109,18 +110,140 @@
 
 <section id="qrcoder" class="section">
   <h1 class="sec_title">Scan My Code</h1>
+
+  <div class="sec_content">
+    <p> This QR Code leads you to this website, pretty cool right ?! <br>
+       yea well i guess so whatever </p>
+    <img src="rec/qrcode.svg">
+  </div>
+
 </section>
 
 <section id="spa" class="section">
   <h1 class="sec_title">Answers</h1>
+
+  <div class="qna">
+    <p> Here we have answers to lifes hardest questions: </p>
+
+  1. The Three main diffrences between web1,web2 and web3
+
+    <ol type="I">
+      <li>
+        web1 consisted of mostly personal pages that were completly static,
+        with web2 websites became more dynamic and things like visit counters and dynamic presentation 
+        of data to each user.
+        with web3 this trend grew even more and things like reactive interfaces and live data became more prominent.
+      </li>
+
+      <li>
+        in web1 you would only be able to search a specific url while in web2 you can search of a webpage
+        using search engines that index the contents of the web's tags. 
+        web3 enables better search results using more complex indexing and searching algprithms that can infer semantic connections and meanings.
+      </li>
+
+      <li> starting with web2 it was possible to crawl the entire web - which enabled the emergance of search engines. </li>
+    </ol>
+
+    2. Medicines side effects Use Case
+
+    <ol type="I">
+      <li> web1: The user would need to remember a url pointing to a website talking about Medicines side for example - www.med.com/penicillin/side-effects </li>
+
+      <li>
+         web2: The user would be able to search for the site through a search engine that indexes web pages acording to the tags they contain
+         thus a search for "penicillin side effects" would lead to web pages containing the search keywords together.
+      </li>
+
+      <li> 
+        web3: Similarly to web2 the user would search "penicillin side effects" in a web search engine though this time he will be lead
+        to web pages that have a strong semantic connection in thier text to the keywords and their combination.
+      </li>
+    </ul>
+  </div>
+
 </section>
 
 <section id="contact" class="section">
   <h1 class="sec_title">Contact Me</h1>
+
+  <div class="sec_content">
+
+    <p> Hey! im very lonly please send me an email, i promise its not an email collector :D </p>
+
+    <form action="mailto:SupremeGamer@gmail.com" onsubmit="addEmoji()" method="post" enctype="text/plain" align="center">
+
+      <p>
+        <label for="Name">Your Email:</label>
+        <input class="txtinput" id="Name" name="Name" type="text" size="25" required>
+      </p>
+    
+
+      <label for="Text">Your Message:</label>
+      <p>
+        <textarea class="txtbox" id="Text" name="Text" rows="10" cols="50" required></textarea>
+      </p>
+      
+      <p>
+        <label for="emojis">Choose an emoji:</label>
+        <select class="emoji" id="emoji_selector">
+          <option >😃</option>
+          <option >😍</option>
+          <option >💻</option>
+          <option >🍀</option>
+          <option >🥦</option>
+        </select> 
+      </p>
+
+      <input class="bttn_submit" type="submit" value="submit">
+      <input class="bttn_reset" type="reset" value="reset">
+    </form>
+  </div>
+  
+  <script>
+    function addEmoji() {
+      const emoji = document.getElementById("emoji_selector").value
+      document.getElementById("Text").value += emoji
+    }
+  </script>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
 </section>
 
 
+<section id="secret" class="section">
+  <h1 class="sec_title">Secret Sauce</h1>
 
+  <div class="sec_content">
+
+    <p>
+      This site should NOT be taken too seriusly most of whats written here is meant to be HUMOUR
+      hope you enjoyed it, and next time maybe dont leave a QR Code pointing to a working solution 
+      to this assignment :D.
+    </p>
+
+  </div>
+
+</section>
 
 
 </body>
